@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 import {Employee} from './Employee';
 
-const alphabeth = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
 @Component({
   selector: 'app-employee',
@@ -12,6 +12,7 @@ const alphabeth = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678
 
 export class EmployeeComponent implements OnInit {
   public employees: Employee[] = [];
+  public status = true;
 
   constructor() {
     this.buildEmployees();
@@ -29,7 +30,7 @@ export class EmployeeComponent implements OnInit {
   getEmployeeName(): string {
     let text = '';
     for (let i = 0; i < 5; i++) {
-      text += alphabeth.charAt(Math.floor(Math.random() * alphabeth.length)).toUpperCase();
+      text += alphabet.charAt(Math.floor(Math.random() * alphabet.length)).toUpperCase();
     }
     return text;
   }
@@ -41,5 +42,9 @@ export class EmployeeComponent implements OnInit {
   getEmployeeStatus(): boolean {
     const status: boolean[] = [true, false];
     return status[Math.floor(Math.random() * status.length)];
+  }
+
+  toggleStatus(status) {
+    this.status = status;
   }
 }

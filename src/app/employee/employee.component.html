@@ -1,6 +1,8 @@
 <h3>{{title}}</h3>
-<ul>
-  <li *ngFor="let employee of employees">
-    The best employee: <strong>{{employee.name}}</strong> with <i>{{employee.age}}</i> year old | Active: <strong>{{employee.status}}</strong>
+<ul *ngFor="let employee of employees; let i = index;">
+  <li *ngIf="employee.status === status" class="employee">
+    <strong>{{i+1}}.</strong> The best employee: <strong>{{employee.name}}</strong> with <i>{{employee.age}}</i> year old
+    <div class="employee__status" [ngStyle]="{'background': (employee.status) ? 'green': 'red'}"></div>
   </li>
 </ul>
+<button (click)="toggleStatus(!status)">Toggle</button>
