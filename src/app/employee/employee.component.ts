@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-
 import {Employee} from './Employee';
 
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -44,7 +43,7 @@ export class EmployeeComponent implements OnInit {
     return status[Math.floor(Math.random() * status.length)];
   }
 
-  toggleStatus(status) {
+  toggleStatus(status: boolean) {
     this.status = status;
   }
 }
