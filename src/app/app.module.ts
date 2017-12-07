@@ -8,16 +8,23 @@ import {EmployeeComponent} from './employee/employee.component';
 
 import {FilterPipe} from '../shared/pipes/filter.pipe';
 
+import {AppRoutingModule} from './app.routing.module';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     FruitComponent,
     EmployeeComponent,
-    FilterPipe
+    FilterPipe,
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

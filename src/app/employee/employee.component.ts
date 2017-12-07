@@ -46,4 +46,8 @@ export class EmployeeComponent implements OnInit {
   toggleStatus(status: boolean) {
     this.status = status;
   }
+
+  employeeDetail(index){
+    console.log(this.employees[index]);
+  }
 }

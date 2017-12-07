@@ -1,9 +1,9 @@
-<h3>{{title}}</h3>
+
 <div class="main-panel">
   <input [(ngModel)]="searchText" class="main-panel__input" type="text" >
 </div>
 <ul>
-  <li *ngFor="let employee of employees | filter:searchText; let i = index" class="employee">
+  <li *ngFor="let employee of employees | filter:searchText; let i = index" routerLink='/detail/{{i}}' class="employee">
     <strong>{{i+1}}.</strong> The best employee: <strong>{{employee.name}}</strong> with <i>{{employee.age}}</i> year old
     <div class="employee__status" [ngStyle]="{'background': (employee.status) ? 'green': 'red'}"></div>
   </li>

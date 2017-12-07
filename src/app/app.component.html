@@ -2,6 +2,15 @@
 <h1>
   {{ title }}
 </h1>
+<nav class="menu">
+  <a class="menu__item menu__item--link" routerLink="home" routerLinkActive="menu__item--active">Home</a>
+  <a class="menu__item menu__item--link" routerLink="employee" routerLinkActive="menu__item--active">Employees</a>
+  <a class="menu__item menu__item--link" routerLink="fruits" routerLinkActive="menu__item--active">Fruits</a>
+  <a class="menu__item menu__item--link" routerLink="contact" routerLinkActive="menu__item--active">Contact</a>
+</nav>
 <!--<app-fruit></app-fruit>-->
-<app-employee></app-employee>
+<!--<app-employee></app-employee>-->
+<router-outlet></router-outlet>
+
+
 

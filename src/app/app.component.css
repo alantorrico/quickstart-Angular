@@ -1,0 +1,28 @@
+.menu{
+  background: aliceblue;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  border-radius: 2px;
+}
+
+.menu__item{
+  list-style: none;
+  background: #399fd6;
+  color: white;
+  padding: 5px;
+  width: 6em;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.menu__item--link{
+  text-decoration: none;
+}
+
+.menu__item--active{
+  background: #7018f2;
+  color: #f2f2f2;
+}

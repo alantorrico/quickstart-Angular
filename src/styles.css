@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  background: white;
+}
+
+body {
+  background-color: #80d0e7;
+  width: 80%;
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}

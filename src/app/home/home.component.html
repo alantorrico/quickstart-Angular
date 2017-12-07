@@ -1,0 +1,7 @@
+<input [(ngModel)]="newClothes" type="text">
+<button (click)="addNewClothes(newClothes)">Add</button>
+<ul>
+  <li *ngFor="let clothes of clothesService.getAllClothes(); let i = index">
+    {{clothes}} <button  (click)="deleteClothes(i)">delete</button>
+  </li>
+</ul>
