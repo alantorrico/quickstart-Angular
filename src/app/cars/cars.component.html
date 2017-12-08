@@ -1,0 +1,43 @@
+<div class="form-container">
+  <h1>Car Form</h1>
+  <form (ngSubmit)="onSubmit(); carForm.reset();" #carForm="ngForm">
+    <div class="form-group">
+      <label for="brand">Brand:</label>
+      <input type="text" class="form-control" id="brand" name="brand" #brand="ngModel" required
+             [(ngModel)]="car.brand">
+      <span *ngIf="brand.touched && !brand.valid">Please fill this field</span>
+    </div>
+
+    <div class="form-group">
+      <label for="model">Model:</label>
+      <input type="text" class="form-control" id="model" name="model"
+             [(ngModel)]="car.model">
+    </div>
+
+    <div class="form-group">
+      <label for="power">Power:</label>
+      <input type="text" class="form-control" id="power" name="power" required pattern="[0-9]+" #power="ngModel"
+             [(ngModel)]="car.power">
+      <span *ngIf="power.touched && !power.valid">Only number please</span>
+    </div>
+
+    <div class="form-group">
+      <label for="color">Color:</label>
+      <input type="text" class="form-control" id="color" name="color" required pattern="[a-zA-Z#]+" #color="ngModel"
+             [(ngModel)]="car.color">
+      <span *ngIf="color.touched && !color.valid">Only string with # please</span>
+    </div>
+
+    <button type="submit" class="btn btn-success"
+            [disabled]="!carForm.form.valid">Submit</button>
+  </form>
+</div>
+
+<!--[ngModelOptions]="{standalone: true}"-->
+
+<div class="car-list">
+  <h4>Lista de carros</h4>
+  <ul *ngFor="let car of cars">
+    <li>{{car.brand}} - {{car.model}} - {{car.color}} - {{car.power}}</li>
+  </ul>
+</div>

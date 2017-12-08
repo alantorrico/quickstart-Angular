@@ -9,8 +9,10 @@ import {EmployeeComponent} from './employee/employee.component';
 import {FilterPipe} from '../shared/pipes/filter.pipe';
 
 import {AppRoutingModule} from './app.routing.module';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
+import {HomeComponent} from './home/home.component';
+import {ContactComponent} from './contact/contact.component';
+import {CarsComponent} from './cars/cars.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { ContactComponent } from './contact/contact.component';
     EmployeeComponent,
     FilterPipe,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    CarsComponent
   ],
   imports: [
     BrowserModule,
