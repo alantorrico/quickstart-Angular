@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {Car} from './car';
-import {isEmpty} from "rxjs/operator/isEmpty";
 
 @Component({
   selector: 'app-cars',
